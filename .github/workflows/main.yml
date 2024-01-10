@@ -28,4 +28,6 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+      - name: Create EC2 instance
+        run: |
           aws ec2 run-instances --region us-west-2 --image-id ami-08d70e59c07c61a3a --count 1 --instance-type t2.micro
